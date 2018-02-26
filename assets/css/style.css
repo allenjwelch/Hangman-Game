@@ -3,3 +3,77 @@
   padding: 0;;
 }
 
+
+
+.hangmanImgs {
+  position: relative;
+}
+
+#hangmanPost {
+  z-index: 1;
+  height: 600px;
+  width: 500px;
+  position: relative; 
+  bottom: 0px; 
+  left: 0; 
+}
+
+#clownHead {
+  z-index: 3;
+  height: 70px;
+  width: 70px;
+  position: absolute; 
+  bottom: 260px; 
+  left: 110px; 
+  visibility: hidden; 
+}
+
+#clownBody{
+  z-index: 2;
+  height: 100px;
+  width: 70px;
+  position: absolute; 
+  bottom: 190px; 
+  left: 110px; 
+  visibility: hidden; 
+}
+
+#clownLArm {
+  z-index: 2;
+  height: 100px;
+  width: 40px;
+  position: absolute; 
+  bottom: 190px; 
+  left: 160px; 
+  visibility: hidden; 
+}
+
+#clownRArm {
+  z-index: 2;
+  height: 100px;
+  width: 40px;
+  position: absolute; 
+  bottom: 190px; 
+  left: 95px; 
+  visibility: hidden; 
+}
+
+#clownLLeg {
+  z-index: 2;
+  height: 100px;
+  width: 40px;
+  position: absolute; 
+  bottom: 95px; 
+  left: 150px; 
+  visibility: hidden; 
+}
+
+#clownRLeg {
+  z-index: 2;
+  height: 100px;
+  width: 40px;
+  position: absolute; 
+  bottom: 95px; 
+  left: 110px; 
+  visibility: hidden; 
+}
