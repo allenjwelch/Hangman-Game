@@ -152,42 +152,42 @@ function gameStart () {
             head.setAttribute("src", "assets/images/head.png");
             head.setAttribute("alt", "head");
             head.setAttribute("id", "head");
-            document.body.appendChild(head);
+            document.getElementById('hangmanImgs').appendChild(head);
             break; 
           case 4:
             var body = document.createElement("IMG");
             body.setAttribute("src", "assets/images/body.png");
             body.setAttribute("alt", "body");
             body.setAttribute("id", "body");
-            document.body.appendChild(body);
+            document.getElementById('hangmanImgs').appendChild(body);
             break; 
           case 3:
             var lLeg = document.createElement("IMG");
             lLeg.setAttribute("src", "assets/images/lLeg.png");
             lLeg.setAttribute("alt", "body");
             lLeg.setAttribute("id", "lLeg");
-            document.body.appendChild(lLeg);    
+            document.getElementById('hangmanImgs').appendChild(lLeg);    
           break; 
           case 2:
             var rLeg = document.createElement("IMG");
             rLeg.setAttribute("src", "assets/images/rLeg.png");
             rLeg.setAttribute("alt", "body");
             rLeg.setAttribute("id", "rLeg");
-            document.body.appendChild(rLeg);            
+            document.getElementById('hangmanImgs').appendChild(rLeg);            
           break; 
           case 1:
             var rArm = document.createElement("IMG");
             rArm.setAttribute("src", "assets/images/rArm.png");
             rArm.setAttribute("alt", "body");
             rArm.setAttribute("id", "rArm");
-            document.body.appendChild(rArm);            
+            document.getElementById('hangmanImgs').appendChild(rArm);            
           break; 
           case 0:
             var lArm = document.createElement("IMG");
             lArm.setAttribute("src", "assets/images/lArm.png");
             lArm.setAttribute("alt", "body");
             lArm.setAttribute("id", "lArm");
-            document.body.appendChild(lArm);            
+            document.getElementById('hangmanImgs').appendChild(lArm);
           default: 
           return; 
         }
@@ -203,7 +203,7 @@ function gameStart () {
     console.log('userGuessRemaining:', userGuessRemaining); 
 
     ///////////////////// DISPLAYS INPUT ON SCREEN/////////////////////
-    document.getElementById("wordInPlay").innerHTML = wordInPlay;
+    // document.getElementById("wordInPlay").innerHTML = wordInPlay;
     document.getElementById("output").innerHTML = output.join(' '); 
     document.getElementById("guess").innerHTML = lettersGuessed.join(' '); 
     document.getElementById("userGuessRemaining").innerHTML = userGuessRemaining;
