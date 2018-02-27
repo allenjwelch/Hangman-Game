@@ -1,7 +1,7 @@
 
 
 // 1. Declare and assign variables/wordInPlayays for game (word choice)
-var wordList = ['ABBA', 'CDDC', 'EFFE', 'GHHG']
+var wordList = ['LINK', 'MEGAMAN', 'MARIO', 'PACMAN', 'SONIC']
 
 // 2. Comp chooses 1 word from the word choices wordInPlayay for each game
 
@@ -23,12 +23,18 @@ var lettersGuessed = [];
 var correctLetter;
 
 
+function gameStart () {
+}; //End gamePlay
+
+
+
 
 
 
 
 // 3. GAME START
 // function gamePlay() {
+  
   document.onkeydown = function(event) {
     userGuess = event.key;
     userGuess = userGuess.toUpperCase(); 
@@ -58,6 +64,7 @@ var correctLetter;
         correctLetter = false; 
         console.log('NO match');
         userGuessRemaining--; 
+        checkRemaining(); 
       } 
     }; //Close checkLetter function
 
@@ -86,26 +93,106 @@ var correctLetter;
       function checkWin() {
         if (output.indexOf('__') < 0) {
           console.log('WINNER!');
+          //Enter Code to change display for each character Win
+
+          if (output.join('') == 'MARIO') {
+            var marioWin = document.createElement("IMG");
+              marioWin.setAttribute("src", "assets/images/mario.gif");
+              marioWin.setAttribute("alt", "mario win");
+              marioWin.setAttribute("id", "marioWin");
+              document.getElementById('hangmanImgs').appendChild(marioWin);
+          } else if (output.join('') == 'LINK') {
+              var linkWin = document.createElement("IMG");
+                linkWin.setAttribute("src", "assets/images/link.gif");
+                linkWin.setAttribute("alt", "linkWin");
+                linkWin.setAttribute("id", "linkWin");
+                document.getElementById('hangmanImgs').appendChild(linkWin);
+          } else if (output.join('') == 'MEGAMAN') {
+              var megamanWin = document.createElement("IMG");
+                megamanWin.setAttribute("src", "assets/images/megaMan.gif");
+                megamanWin.setAttribute("alt", "megamanWin");
+                megamanWin.setAttribute("id", "megamanWin");
+                document.getElementById('hangmanImgs').appendChild(megamanWin);
+          } else if (output.join('') == 'SONIC') {
+              var sonicWin = document.createElement("IMG");
+              sonicWin.setAttribute("src", "assets/images/sonic.gif");
+              sonicWin.setAttribute("alt", "sonicWin");
+              sonicWin.setAttribute("id", "sonicWin");
+              document.getElementById('hangmanImgs').appendChild(sonicWin);
+          } else if (output.join('') == 'PACMAN') {
+              var pacmanWin = document.createElement("IMG");
+              pacmanWin.setAttribute("src", "assets/images/pacman.gif");
+              pacmanWin.setAttribute("alt", "pacmanWin");
+              pacmanWin.setAttribute("id", "pacmanWin");
+              document.getElementById('hangmanImgs').appendChild(pacmanWin);
+          } else {
+            return; 
+          }; 
+
+
         } else if (userGuessRemaining == 0) {
           console.log('LOSER!');
+          // document.body.style.backgroundImage = "url('assets/images/gameOver.gif')"
+          // document.body.style.backgroundSize = "100%";
+
+          var gameOver = document.createElement("IMG");
+            gameOver.setAttribute("src", "assets/images/gameOver.gif");
+            gameOver.setAttribute("alt", "game over");
+            gameOver.setAttribute("id", "gameOver");
+            document.body.appendChild(gameOver);
         } else {
           console.log('idk!');
         }
       };
     
-    //   function addClown() {
-    //     switch (userGuessRemaining) {
-    //       case 5:
-    //         document.querySelector('#clownHead').style.visibility = "visibile";
-    //         break; 
-    //       case 4:
-    //         document.querySelector('#clownBody').style.visibility = "visibile";
-    //         break; 
-    //       case 3:
-    //         document.querySelector('#clownHead').style.visibility = "visibile";
-    //         break; 
-    //   }
-    // }
+      function checkRemaining() {
+        switch (userGuessRemaining) {
+          case 5:
+            var head = document.createElement("IMG");
+            head.setAttribute("src", "assets/images/head.png");
+            head.setAttribute("alt", "head");
+            head.setAttribute("id", "head");
+            document.body.appendChild(head);
+            break; 
+          case 4:
+            var body = document.createElement("IMG");
+            body.setAttribute("src", "assets/images/body.png");
+            body.setAttribute("alt", "body");
+            body.setAttribute("id", "body");
+            document.body.appendChild(body);
+            break; 
+          case 3:
+            var lLeg = document.createElement("IMG");
+            lLeg.setAttribute("src", "assets/images/lLeg.png");
+            lLeg.setAttribute("alt", "body");
+            lLeg.setAttribute("id", "lLeg");
+            document.body.appendChild(lLeg);    
+          break; 
+          case 2:
+            var rLeg = document.createElement("IMG");
+            rLeg.setAttribute("src", "assets/images/rLeg.png");
+            rLeg.setAttribute("alt", "body");
+            rLeg.setAttribute("id", "rLeg");
+            document.body.appendChild(rLeg);            
+          break; 
+          case 1:
+            var rArm = document.createElement("IMG");
+            rArm.setAttribute("src", "assets/images/rArm.png");
+            rArm.setAttribute("alt", "body");
+            rArm.setAttribute("id", "rArm");
+            document.body.appendChild(rArm);            
+          break; 
+          case 0:
+            var lArm = document.createElement("IMG");
+            lArm.setAttribute("src", "assets/images/lArm.png");
+            lArm.setAttribute("alt", "body");
+            lArm.setAttribute("id", "lArm");
+            document.body.appendChild(lArm);            
+          default: 
+          return; 
+        }
+      };
+
 
 
 
@@ -119,8 +206,10 @@ var correctLetter;
     document.getElementById("wordInPlay").innerHTML = wordInPlay;
     document.getElementById("output").innerHTML = output.join(' '); 
     document.getElementById("guess").innerHTML = lettersGuessed.join(' '); 
-    document.getElementById("userGuessRemaining").innerHTML = userGuessRemaining; 
-
+    document.getElementById("userGuessRemaining").innerHTML = userGuessRemaining;
+  
+  
+  
 
 
 
@@ -128,7 +217,6 @@ var correctLetter;
 
   }; //End document.event
 
-// }; //End gamePlay
 
 
 

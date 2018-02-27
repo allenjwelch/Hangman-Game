@@ -1,79 +1,172 @@
 * {
-  margin: 0;
-  padding: 0;;
+  margin: 5px;
+  padding: 5px;
 }
 
+.main_display {
+  height: auto; 
+  border: 2px solid black; 
+  padding: 20px;
+  margin: 20px;
+  background: black); 
+}
 
+h2 {
+  color: white; 
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px; 
+}
 
-.hangmanImgs {
+h2#title {
+  font-size: 20px; 
+  text-align: center; 
+
+}
+
+h2#subTitle {
+  font-size: 15px; 
+  color: rgb(165, 113, 113); 
+  text-align: center; 
+}
+
+body {
+  position: absolute; 
+  top: 0; 
+  height: 99%; 
+  width: 99%; 
+  border: 2px solid red; 
+  background: rgb(37, 37, 37); 
+
+}
+
+#hangmanImgs {
   position: relative;
+  top: 10px; 
+  left: auto; 
+  right: auto; 
+  margin: 10px auto; 
+  border: 2px solid black; 
+  height: 300px; 
+  width: 50%; 
+  background: white; 
 }
 
-#hangmanPost {
-  z-index: 1;
-  height: 600px;
-  width: 500px;
-  position: relative; 
-  bottom: 0px; 
-  left: 0; 
-}
-
-#clownHead {
+#head {
   z-index: 3;
   height: 70px;
   width: 70px;
   position: absolute; 
-  bottom: 260px; 
-  left: 110px; 
-  visibility: hidden; 
+  top: 40px; 
+  left: 45%; 
+  right: 50%;
 }
 
-#clownBody{
+#body{
   z-index: 2;
   height: 100px;
+  width: 20px;
+  position: absolute; 
+  top: 90px; 
+  left: 50%; 
+  right: 50%;
+}
+
+#lArm {
+  z-index: 1;
+  height: 40px;
   width: 70px;
   position: absolute; 
-  bottom: 190px; 
-  left: 110px; 
-  visibility: hidden; 
+  top: 100px; 
+  left: 53%; 
+  right: 48%;
 }
 
-#clownLArm {
-  z-index: 2;
+#rArm {
+  z-index: 1;
+  height: 60px;
+  width: 40px;
+  position: absolute; 
+  top: 100px; 
+  left: 43%; 
+  right: 58%;
+}
+
+#lLeg {
+  z-index: 1;
   height: 100px;
   width: 40px;
   position: absolute; 
-  bottom: 190px; 
-  left: 160px; 
-  visibility: hidden; 
+  top: 180px; 
+  left: 50%; 
+  right: 49%;
 }
 
-#clownRArm {
-  z-index: 2;
+#rLeg {
+  z-index: 1;
   height: 100px;
   width: 40px;
   position: absolute; 
-  bottom: 190px; 
-  left: 95px; 
-  visibility: hidden; 
+  top: 180px; 
+  left: 45%; 
+  right: 50%;
 }
 
-#clownLLeg {
-  z-index: 2;
-  height: 100px;
-  width: 40px;
-  position: absolute; 
-  bottom: 95px; 
-  left: 150px; 
-  visibility: hidden; 
+#gameOver {
+  z-index: 5; 
+  position: fixed; 
+  top: 0; 
+  height: 100%; 
+  width: 100%; 
+  animation-name: anim1;
+  animation-duration: 3s;
 }
 
-#clownRLeg {
-  z-index: 2;
-  height: 100px;
-  width: 40px;
+@keyframes anim1 {
+  from {opacity: 0;}
+  to {opacity: 100%;}
+}
+
+#marioWin {
+  height: 100%; 
+  width: 100%; 
   position: absolute; 
-  bottom: 95px; 
-  left: 110px; 
-  visibility: hidden; 
+  z-index: 5; 
+  animation-name: anim1;
+  animation-duration: 3s;
+}
+
+#linkWin {
+  height: 100%; 
+  width: 100%; 
+  position: absolute; 
+  z-index: 5; 
+  animation-name: anim1;
+  animation-duration: 3s;
+}
+
+#megamanWin {
+  height: 100%; 
+  width: 100%; 
+  position: absolute; 
+  z-index: 5; 
+  animation-name: anim1;
+  animation-duration: 3s;
+}
+
+#sonicWin{
+  height: 100%; 
+  width: 100%; 
+  position: absolute; 
+  z-index: 5; 
+  animation-name: anim1;
+  animation-duration: 3s;
+}
+
+#pacmanWin {
+  height: 100%; 
+  width: 100%; 
+  position: absolute; 
+  z-index: 5; 
+  animation-name: anim1;
+  animation-duration: 3s;
 }

@@ -8,28 +8,26 @@
   
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
 
 </head>
 <body>
 
-  <h1>Hangman Game</h1>
-  <br>
-  <h2>Word in Play: <span id = "wordInPlay"></span></h2><br>
-  <h2>Output: <span id = "output"></span></h2><br>
-  <h2>Letters Guessed: <span id = "guess"></span></h2><br>
-  <h2>Incorrect Guesses Remaining: <span id = "userGuessRemaining">6</span></h2><br>
-  
+  <main id = "hangmanImgs"></main>
 
-  <div class = "hangmanImgs">
-  <img id = "hangmanPost" src="assets/images/Hangman.png" alt="hangman post">
-  <img id = "clownHead" src="assets/images/clownHead.png" alt="clown head">
-  <img id = "clownBody" src="assets/images/clownBody.png" alt="clown head">
-  <img id = "clownLArm" src="assets/images/clownLArm.png" alt="clown head">
-  <img id = "clownRArm" src="assets/images/clownRArm.png" alt="clown head">
-  <img id = "clownLLeg" src="assets/images/clownLLeg.png" alt="clown head">
-  <img id = "clownRLeg" src="assets/images/clownRLeg.png" alt="clown head">
+  <div class = "main_display">
+    <h2 id = "title">Hangman!</h2><br>
+    <h2 id = "subTitle">Classic Video Game Characters</h2><br>
+    <br>
+    <h2>Word in Play: <span id = "wordInPlay"></span></h2><br>
+    <h2>Output: <span id = "output"></span></h2><br>
+    <h2>Letters Guessed: </h2><br>
+    <h2> <span id = "guess"></span></h2><br>
+    <h2>Lives Remaining: <span id = "userGuessRemaining">6</span></h2><br>
+  </div>  
 
-  </div>
+
 
 
   <script type = 'text/javascript' src="assets/javascript/game.js"></script>
