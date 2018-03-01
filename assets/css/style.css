@@ -18,10 +18,11 @@ h2 {
   font-size: 16px; 
 }
 
-footer {
+audio {
   position: absolute; 
   bottom: 0; 
   left: 0; 
+  visibility: hidden; 
 }
 
 h2#title {
@@ -30,10 +31,6 @@ h2#title {
 }
 
 h2#output {
-  font-size: 12px; 
-}
-
-h2#guess {
   font-size: 12px; 
 }
 
@@ -130,20 +127,20 @@ img {
   left: 0; 
   height: 100%; 
   width: 100%; 
-  animation-name: anim1;
+  animation-name: anim2;
   animation-duration: 8s;
 }
 
-@keyframes anim1 {
+@keyframes anim2 {
   from {opacity: 0;}
   to {opacity: 100%;}
 }
 
-/* @keyframes anim1 {
+@keyframes anim1 {
   0% {opacity: 0;}
   50% {opacity: 100%;}
-  100%
-} */
+  100% {opacity: 0;}
+}
 
 .winImages {  /*Need to double check that this works*/
   height: 100%; 

@@ -20,13 +20,13 @@ var userGuessRemaining = 6;
     
 var lettersGuessed = []; 
 
-var correctLetter;
+// var correctLetter;
 
 var gameActive = false; 
 
-var removePlayAgain = 0; 
+// var removePlayAgain = 0; 
 
-
+var score = 0; 
 
 // 3. GAME START
 
@@ -74,6 +74,7 @@ var removePlayAgain = 0;
     function checkWin() {
       if (output.indexOf('__') < 0) {
         console.log('WINNER!');
+        score++; 
         gameActive = false; 
         setTimeout(reset, 3000); 
           //Enter Code to change display for each character Win
@@ -119,6 +120,7 @@ var removePlayAgain = 0;
           
         } else if (userGuessRemaining == 0) {
           console.log('LOSER!');
+          score--; 
           gameActive = false; 
           // reset(); 
 
@@ -223,29 +225,8 @@ var removePlayAgain = 0;
         document.getElementById('pacmanWin').style.visibility = "hidden"; 
         document.getElementById('sonicWin').style.visibility = "hidden"; 
 
-
-
-
-
-        // if (document.body.contains('gameOver')) {
-        //   gameOver.parentNode.removeChild(gameOver); //Only works if object was created already
-        // } else {};
-
-        // if (document.getElementById("gameOver").length > 0) {
-        //   gameOver.parentNode.removeChild(gameOver); //Only works if object was created already
-        // } else {}
-
-
-        // gameActive = true; 
-    
-
-        //Need to remove the GameOver gif
-
-        //Need to remove the Winning gif
-
-      // } //Close reset onkeydown function
-
     }; //Close reset function
+
 
     checkLetter(userGuess); 
     checkWin(); 
@@ -258,33 +239,13 @@ var removePlayAgain = 0;
     document.getElementById("output").innerHTML = output.join(' '); 
     document.getElementById("guess").innerHTML = lettersGuessed.join(' '); 
     document.getElementById("userGuessRemaining").innerHTML = userGuessRemaining;
-        
+    document.getElementById("score").innerHTML = score;
+
+
   }; //End document.event
 // }  else {}; // End Game Active IF loop
   
 
-
-// document.onkeydown = function(event) {
-//   gameActive = true; 
-// }; 
-  
-  
-  
-  
-  
-  
-  
-  // // CONVERTS AN ARRAY INTO AN OBJECT
-  // var obj = {};
-  // wordInPlay.forEach(function(data){
-    //     obj[data[0]] = data[1]
-    // });
-
-    // console.log(obj);
-    
-    
-
-    
 
     
     
@@ -293,25 +254,6 @@ var removePlayAgain = 0;
     //         console.log(vowels); 
     
 
-    
-    
-    
-    
-
-
-    
-    // 4. User chooses a letter at a time & code checks if each letter is within the word choice
-    
-    
-    // 5. Choices are displayed letters guessed area on screen. If user chooses correct letter, correct letter gets displayed in different area of the screen. If user chooses incorrect letter, userGuess# reduces by 1 
-    
-    
-    
-    
-    
-
-    
-    
     //////////////////////////SCRAP HEAP///////////////////
       // if (wordInPlay.indexOf(userGuess) > -1) {
       //   console.log('MATCH!'); 
