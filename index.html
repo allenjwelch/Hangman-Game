@@ -14,24 +14,51 @@
 </head>
 <body>
 
-  <main id = "hangmanImgs"></main>
+  <div id = "hangmanBox">
+    <!-- HangMan Images -->    
+    <img id = "head" class = "hangman" src="assets/images/head.png" alt="head">
+    <img id = "body" class = "hangman" src="assets/images/body.png" alt="body">
+    <img id = "lLeg" class = "hangman" src="assets/images/lLeg.png" alt="lLeg">
+    <img id = "rLeg" class = "hangman" src="assets/images/rLeg.png" alt="rLeg">
+    <img id = "rArm" class = "hangman" src="assets/images/rArm.png" alt="rArm">
+    <img id = "lArm" class = "hangman" src="assets/images/lArm.png" alt="lArm">
+
+    <!-- Win Images -->
+    <img id = "marioWin" class = "winImages" src="assets/images/mario.gif" alt="mario">
+    <img id = "linkWin" class = "winImages" src="assets/images/link.gif" alt="mario">
+    <img id = "megamanWin" class = "winImages" src="assets/images/megaMan.gif" alt="mario">
+    <img id = "sonicWin" class = "winImages" src="assets/images/sonic.gif" alt="mario">
+    <img id = "pacmanWin" class = "winImages" src="assets/images/pacman.gif" alt="mario">
+    <img id = "anyKey" src="assets/images/anyKey.png" alt="anykey">
+
+
+    <!-- Lose Images -->
+    <img id = "gameOver" src="assets/images/gameOver.gif" alt="gameOver">
+
+  </div>
 
   <div class = "main_display">
     <h2 id = "title">Hangman!</h2><br>
     <h2 id = "subTitle">Classic Video Game Characters</h2><br>
     <br>
     <!-- <h2>Word in Play: <span id = "wordInPlay"></span></h2><br> -->
-    <h2>Output: <span id = "output"></span></h2><br>
+    <h2>Character: </h2><br>
+    <h2><span id = "output"></span></h2><br>
     <h2>Letters Guessed: </h2><br>
     <h2> <span id = "guess"></span></h2><br>
     <h2>Lives Remaining: <span id = "userGuessRemaining">6</span></h2><br>
+    <h2> <span id = "playAgain"></span></h2>
   </div>  
 
-
+  <footer><audio id= "audio" controls autoplay src="assets/snd/MegaMan3.mp3"></audio></footer> 
 
 
   <script type = 'text/javascript' src="assets/javascript/game.js"></script>
+
+
 </body>
+
+
 
 <!-- Watch the demo.
 
