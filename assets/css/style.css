@@ -151,50 +151,6 @@ img {
   animation-duration: 2s;
 }
 
-#marioWin {
-  /* height: 100%; 
-  width: 100%; 
-  position: absolute; 
-  z-index: 5; 
-  animation-name: anim1;
-  animation-duration: 3s; */
-}
-
-#linkWin {
-  /* height: 100%; 
-  width: 100%; 
-  position: absolute; 
-  z-index: 5; 
-  animation-name: anim1;
-  animation-duration: 3s; */
-}
-
-#megamanWin {
-  /* height: 100%; 
-  width: 100%; 
-  position: absolute; 
-  z-index: 5; 
-  animation-name: anim1;
-  animation-duration: 3s; */
-}
-
-#sonicWin{
-  /* height: 100%; 
-  width: 100%; 
-  position: absolute; 
-  z-index: 5; 
-  animation-name: anim1;
-  animation-duration: 3s; */
-}
-
-#pacmanWin {
-  /* height: 100%; 
-  width: 100%; 
-  position: absolute; 
-  z-index: 5; 
-  animation-name: anim1;
-  animation-duration: 3s; */
-}
 
 @media screen and (min-width: 768px) {
  
