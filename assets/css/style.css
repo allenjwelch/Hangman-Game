@@ -224,10 +224,6 @@ img {
     left: 80px;
   }
 
-
-
-
-
 }
 
 @media screen and (min-width: 980px) {
@@ -297,3 +293,17 @@ img {
     top: 215px; 
     left: 105px;
   }
+}
+
+
+@media screen and (min-width: 1130px) {
+  #hangmanBox {
+    margin-left: 150px;
+    margin-top: 50px; 
+  }
+
+  .main_display {
+    margin-top: 60px; 
+
+  }
+}
